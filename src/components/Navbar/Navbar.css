@@ -1,0 +1,76 @@
+.navbar {
+  width: 100%;
+  padding: 1.429rem 6%;
+  display: flex;
+  justify-content: space-between;
+  position: fixed;
+  font-size: 1rem; /*maybe 14px */
+  color: #e5e5e5;
+  border-image: linear-gradient(180deg, rgba(0, 0, 0, 0.7) 10%, transparent);
+  z-index: 1;
+}
+
+.navbar-left {
+  display: flex;
+  align-items: center;
+  gap: 3.571rem; /*maybe 50px*/
+}
+
+.navbar-left img {
+  width: 6.429rem; /*maybe 90px*/
+}
+
+.navbar-left ul {
+  display: flex;
+  list-style: none;
+  gap: 1.429rem; /*mbe 20px*/
+}
+
+.navbar-left ul li {
+  cursor: pointer;
+}
+
+.navbar-right {
+  display: flex;
+  gap: 3.571rem;
+  align-items: center;
+}
+
+.navbar-right .icon {
+  width: 1.429rem;
+  cursor: pointer;
+}
+
+.navbar-right .profile {
+  border-radius: 0.286rem;
+  width: 2.5rem;
+}
+
+.navbar-profile {
+  display: flex;
+  align-items: center;
+  gap: 0.714rem;
+  cursor: pointer;
+  position: relative;
+}
+.navbar .dropdown {
+  position: absolute;
+  top: 100%;
+  right: 6%;
+  width: max-content;
+  background: #191919;
+  padding: 1.286rem 1.571rem;
+  border-radius: 2px;
+  text-decoration: underline; /*maybe not*/
+  z-index: 1;
+  display: none;
+}
+
+.navbar .dropdown p {
+  font-size: 0.929rem;
+  cursor: pointer;
+}
+
+.navbar-profile:hover .dropdown {
+  display: block;
+}

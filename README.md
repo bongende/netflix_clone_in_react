@@ -9,6 +9,18 @@
 - hand on project in react
 - learn to use firebase
 - remember about web developpement
+- parctice about react router
+
+## Details
+
+- font familly : [poppins](https://fonts.google.com/specimen/Poppins?query=popp)
+
+### Technologies useds
+
+- React
+- React-router
+- javascript
+- [tmdb movis database](https://www.themoviedb.org)
 
 This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
 

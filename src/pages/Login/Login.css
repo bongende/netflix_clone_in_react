@@ -1,0 +1,87 @@
+.login {
+  height: 100vh;
+  background-image: linear-gradient(#00000007, #0000007e),
+    url("/background_banner.jpg");
+  padding: 1.429rem 0.571rem;
+}
+
+.login .login-logo {
+  width: 10.514rem;
+}
+
+.login .login-form {
+  width: 100%;
+  max-width: 450px;
+  background: rgba(0, 0, 0, 0.75);
+  border-radius: 4px;
+  padding: 4.286rem;
+  margin: auto;
+}
+
+.login .login-form h1 {
+  font-size: 2.286rem;
+  font-weight: 500;
+  margin-bottom: 2rem;
+}
+
+.login .login-form input {
+  width: 100%;
+  height: 3.571rem;
+  background: #333;
+  color: #fff;
+  margin: 0.857rem 0;
+  border: 0;
+  border-radius: 4px;
+  padding: 1.143rem 1.429rem;
+  outline: 0;
+  font-size: 1.143rem;
+  font-weight: 500;
+}
+
+.login .login-form input::placeholder {
+  /*Not change!*/
+  font-size: 1.143rem;
+}
+
+.login-form button {
+  width: 100%;
+  border: none;
+  outline: 0;
+  padding: 1.143rem;
+  background: #e50914;
+  color: #fff;
+  border-radius: 4px;
+  font-size: 1.143rem;
+  margin-top: 1.429rem;
+  cursor: pointer;
+}
+
+.login-form .form-help {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  color: #b3b3b3;
+  font-size: 0.929;
+}
+
+.login-form .form-help .remember {
+  display: flex;
+  align-items: center;
+  gap: 0.357rem;
+}
+
+.form-help .remember input {
+  width: 1.286rem;
+  height: 1.286rem;
+}
+
+.form-switch {
+  margin-top: 2.857rem;
+  color: #737373;
+}
+
+.form-switch span {
+  margin-left: 0.429rem;
+  cursor: pointer;
+  color: #fff;
+}

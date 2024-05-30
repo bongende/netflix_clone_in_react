@@ -1,0 +1,29 @@
+.footer {
+  padding: 2.143rem;
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+.footer .footer-icons {
+  display: flex;
+  gap: 1.286rem;
+  margin: 2.857rem 0;
+}
+
+.footer-icons img {
+  width: 2.143rem;
+  cursor: pointer;
+}
+
+.footer ul {
+  display: grid;
+  grid-template-columns: auto auto auto auto;
+  gap: 1.071rem;
+  margin-bottom: 2.143rem;
+  list-style: none;
+}
+
+.footer .copyright-text {
+  color: gray;
+  font-size: 1rem;
+}
