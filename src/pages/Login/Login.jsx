@@ -1,9 +1,20 @@
 import React, { useState } from "react";
 import "./Login.css";
 import logo from "../../assets/logo.png";
+import { login, signup as signup } from "../../firebase";
 
 const Login = () => {
   const [signState, setSignState] = useState("Sign In");
+  const [name, setName] = useState("");
+  const [email, setEmail] = useState("");
+  const [pwd, setPwd] = useState("");
+
+  const userAuth = async (e) => {
+    e.preventDefault();
+    signState === "Sign In"
+      ? await signup(email, pwd)
+      : await login(name, email, pwd);
+  };
 
   return (
     <div className="login">
@@ -12,11 +23,34 @@ const Login = () => {
         <h1>{signState}</h1>
         <form action="">
           {signState === "Sign Up" && (
-            <input type="text" placeholder="Your name" />
+            <input
+              type="text"
+              value={name}
+              onChange={(e) => {
+                setName(e.target.value);
+              }}
+              placeholder="Your name"
+            />
           )}
-          <input type="email" placeholder="Email" />
-          <input type="passworld" placeholder="Passworld" />
-          <button>{signState}</button>
+          <input
+            type="email"
+            value={email}
+            onChange={(e) => {
+              setEmail(e.target.value);
+            }}
+            placeholder="Email"
+          />
+          <input
+            type="password"
+            value={pwd}
+            onChange={(e) => {
+              setPwd(e.target.value);
+            }}
+            placeholder="Password"
+          />
+          <button onClick={userAuth} type="submit">
+            {signState}
+          </button>
           <div className="form-help">
             <div className="remember">
               <input type="checkbox" id="remember-check" />

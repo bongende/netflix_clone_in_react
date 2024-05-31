@@ -31,4 +31,6 @@
   position: absolute;
   bottom: 0.714rem;
   right: 0.714rem;
+  text-decoration: none;
+  color: #fff;
 }
