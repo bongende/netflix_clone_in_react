@@ -1,22 +1,30 @@
 import React, { useState } from "react";
 import "./Login.css";
 import logo from "../../assets/logo.png";
-import { login, signup as signup } from "../../firebase";
+import { login, signup } from "../../firebase";
+import netflix_spinner from "../../assets/netflix_spinner.gif";
 
 const Login = () => {
   const [signState, setSignState] = useState("Sign In");
   const [name, setName] = useState("");
   const [email, setEmail] = useState("");
   const [pwd, setPwd] = useState("");
+  const [loading, setLoading] = useState(false);
 
   const userAuth = async (e) => {
     e.preventDefault();
-    signState === "Sign In"
-      ? await signup(email, pwd)
-      : await login(name, email, pwd);
+    setLoading(true);
+    signState === "Sign Up"
+      ? await signup(name, email, pwd)
+      : await login(email, pwd);
+    setLoading(false);
   };
 
-  return (
+  return loading ? (
+    <div className="login-spinner">
+      <img src={netflix_spinner} alt="loading annimation" />
+    </div>
+  ) : (
     <div className="login">
       <img src={logo} alt="login logo" className="login-logo" />
       <div className="login-form">
@@ -36,7 +44,7 @@ const Login = () => {
             type="email"
             value={email}
             onChange={(e) => {
-              setEmail(e.target.value); //TODO : Fix the error
+              setEmail(e.target.value);
             }}
             placeholder="Email"
           />
