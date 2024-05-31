@@ -36,7 +36,7 @@ const Login = () => {
             type="email"
             value={email}
             onChange={(e) => {
-              setEmail(e.target.value);
+              setEmail(e.target.value); //TODO : Fix the error
             }}
             placeholder="Email"
           />
